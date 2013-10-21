@@ -51,17 +51,6 @@
 
 <form method="post" action="<?php $_SERVER['PHP_SELF']; ?>">
     <table id="nf-settings">
-         <tr>
-            <th scope="row">
-                Referral Code
-            </th>
-            <td>
-                <input type="text" name="cp_referral" value="<?php echo $cp_referral; ?>" />
-            </td>
-            <td>
-                This code should have been provided to you when you signed up for our 404 pages.  Please enter it here.
-            </td>
-        </tr>
        <tr>
             <th scope="row">
                 Omit 404 Status

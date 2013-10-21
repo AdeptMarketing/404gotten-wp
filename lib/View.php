@@ -17,7 +17,7 @@ class Compassion_View
      * @param array $data An associative array of data that be be extracted and
      *  available to the view
      */
-    public static function load($file, $data = array())
+    public static function load($file)
     {
         $file = dirname(__FILE__) . '/../views/' . $file . '.php';
 
@@ -25,9 +25,6 @@ class Compassion_View
         {
             throw new Exception("View '$file' was not found");
         }
-
-        # Extract the variables into the global scope so the views can use them
-        extract($data);
 
         include($file);
     }

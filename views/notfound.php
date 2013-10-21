@@ -17,6 +17,6 @@
 			}
 		</style>
 
-		<iframe src="http://demo.marketingadept.com/compassion/live-test/?referral=<?php echo $referral; ?>" width="100%" height="900" frameborder="0" scrolling="no"></iframe>
+		<iframe src="http://demo.marketingadept.com/compassion/live-test/?r=wp" width="100%" height="900" frameborder="0" scrolling="no"></iframe>
 	</body>
 </html>

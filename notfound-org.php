@@ -34,14 +34,7 @@ class Compassion_Core
                 header("HTTP/1.1 200 OK");
 
 
-            $referral = Compassion_Utility::getOption('cp_referral', false);
-
-
-            $data = array (
-                'referral' => $referral,
-            );
-
-            Compassion_View::load('notfound', $data);
+            Compassion_View::load('notfound');
             exit;
         }
     }
@@ -71,7 +64,6 @@ class Compassion_Core
 
         $data = array (
             'cp_omit_error' => Compassion_Utility::getOption('cp_omit_error', false),
-            'cp_referral' => Compassion_Utility::getOption('cp_referral', false)
         );
 
         Compassion_View::load('admin', $data);

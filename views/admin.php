@@ -30,68 +30,52 @@
     #preview {
         border: 1px solid #ccc;
     }
+
+    h3
+    {
+        border-bottom: 1px solid #ccc;
+    }
 </style>
-<h1>NotFound.org 404 Page Settings</h1>
+<div class="wrap">
+<h2>Compassion.org 404 Page Settings</h2>
 
-<div id="nf_info">
-    Contributions welcome!  Hit me up <a href="http://twitter.com/_kennyk_">@_kennyk_</a>, or on the <a href="http://github.com/katzgrau/wp-notfound-org">github project page</a>. Or, reach him via <a href="mailto:katzgrau@gmail.com">email</a> with any questions.
-</div>
-
-<h2>Preview</h2>
+<h3>Preview</h3>
 
 <p> 
-    If you're seeing this page, the plugin is active. You can make sure it's working by
-    visiting a page that probably doesn't exist. Like this one:
+    <strong>This plugin is active</strong>. You can make sure it's working by
+    visiting a page that probably doesn't exist. Like this one: <a target="_blank" href="<?php echo site_url() ?>/this-page-is-probably-a-404"><?php echo site_url() ?>/this-page-is-probably-a-404</a>
 </p>
 
-<p>
-    <a target="_blank" href="<?php echo site_url() ?>/this-page-is-probably-a-404"><?php echo site_url() ?>/this-page-is-probably   -a-404</a>
-</p>
 
-<p />
-
-<h2>Customization</h2>
+<h3>Customization</h3>
 
 <form method="post" action="<?php $_SERVER['PHP_SELF']; ?>">
     <table id="nf-settings">
-        <tr>
+         <tr>
             <th scope="row">
-                404 Page Text
+                Referral Code
             </th>
             <td>
-                <textarea wrap="off" class="nf-textarea" name="nf_template"><?php echo $nf_template; ?></textarea>
+                <input type="text" name="cp_referral" value="<?php echo $cp_referral; ?>" />
             </td>
             <td>
-                This is the text that will be displayed at the top of the 404 page.
-                You can use these pseudo-variables:
-                <ul>
-                    <li>{{SITE_URL}}</li>
-                    <li>{{SITE_NAME}}</li>
-                </ul>
+                This code should have been provided to you when you signed up for our 404 pages.  Please enter it here.
             </td>
         </tr>
-        <tr>
+       <tr>
             <th scope="row">
                 Omit 404 Status
             </th>
             <td>
-                <input type="checkbox" name="nf_omit_error" value="1" <?php if($nf_omit_error): ?>checked="yes"<?php endif; ?> />
+                <input type="checkbox" name="cp_omit_error" value="1" <?php if($cp_omit_error): ?>checked="yes"<?php endif; ?> />
             </td>
             <td>
-                Enable this if you've activated this plugin, but the missing child page doesn't
+                Enable this if you've activated this plugin, but a sponsored child page doesn't
                 seem to be appearing. It may be that your webhost catches 404s and provides its own
                 error page.
             </td>
         </tr>
-        <tr>
-            <th scope="row">
-                Save
-            </th>
-            <td>
-                <input name="nf_submit" type="submit" value="Save!" />
-            </td>
-            <td>
-            </td>
-        </tr>
     </table>
+    <p><input name="nf_submit" type="submit" class="button button-primary" value="Save Settings" /></p>
 </form>
+</div>

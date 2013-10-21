@@ -8,7 +8,7 @@
 /**
  * This class contains methods for loading WPSearch views
  */
-class NotFound_View
+class Compassion_View
 {
     /**
      * Load a view file. The file should be located in ../views.

@@ -10,7 +10,7 @@
  * The class contains a number of utility methods that may be needed by various
  *  parts of WPSearch
  */
-class NotFound_Utility
+class Compassion_Utility
 {
     /**
      * Sets a Wordpress option

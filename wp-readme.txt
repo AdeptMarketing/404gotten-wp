@@ -1,5 +1,5 @@
 === Plugin Name ===
-Contributors: katzgrau
+Contributors: katzgrau, philbirnie
 Tags: not,found,missing,children,notfound,notfound.org,404,page
 Requires at least: 3.0
 Tested up to: 3.4.2
@@ -7,8 +7,7 @@ Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This is a Wordpress plugin that turns your 404 "page not found" error 
-into a page devoted to helping find missing children.
+A Wordpress plugin that turns your 404 "not found" error page into a 404 page dedicated to help impoverished children around the world receive sponsorships.
 
 == Description ==
 
@@ -43,5 +42,5 @@ provides a more portable version, I'll accommodate that too.
 == Installation ==
 
 There aren't really any special instructions for installing this plug-in. Once
-installed, be sure to go to the 'NotFound.org' settings page if you'd
+installed, be sure to go to the 'Compassion.org' settings page if you'd
 like to do some basic customization.

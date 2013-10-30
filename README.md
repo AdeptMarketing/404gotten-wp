@@ -7,7 +7,7 @@ with Apache or modifying your theme code.
 ## Installing
 
 Hopefully this plugin will be approved by Wordpress.org soon., so it'll go into
-their repository.  Until then, you can always [grab the zip file](https://github.com/AdeptMarketing/wp-notfound-org/archive/master.zip) and upload it to your server.
+their repository.  Until then, you can always [grab the zip file](https://github.com/AdeptMarketing/404gotten-wp/archive/master.zip) and upload it to your server.
 
 ## Contributing
 

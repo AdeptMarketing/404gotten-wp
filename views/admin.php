@@ -56,7 +56,7 @@
                 Omit 404 Status
             </th>
             <td>
-                <input type="checkbox" name="cp_omit_error" value="1" <?php if($cp_omit_error): ?>checked="yes"<?php endif; ?> />
+                <input type="checkbox" name="cp_omit_error" value="1" <?php if($data['cp_omit_error']): ?>checked="yes"<?php endif; ?> />
             </td>
             <td>
                 Enable this if you've activated this plugin, but a sponsored child page doesn't

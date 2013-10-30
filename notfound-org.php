@@ -44,7 +44,7 @@ class Compassion_Core
      */
     static function registerAdmin()
     {
-        add_options_page('Compassion.com', 'Compassion.com', 'edit_pages', 'compassion-com.php', array(__CLASS__, 'adminMenuCallback'));
+        add_options_page('404gotten.org', '404gotten.org', 'edit_pages', 'compassion-com.php', array(__CLASS__, 'adminMenuCallback'));
     }
 
     /**

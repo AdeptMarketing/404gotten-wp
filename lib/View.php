@@ -17,7 +17,7 @@ class Compassion_View
      * @param array $data An associative array of data that be be extracted and
      *  available to the view
      */
-    public static function load($file)
+    public static function load($file, $data=array())
     {
         $file = dirname(__FILE__) . '/../views/' . $file . '.php';
 

@@ -2,8 +2,8 @@
 /*
 Plugin Name: 404gotten.org 404 Page
 Plugin URI: https://github.com/AdeptMarketing/404gotten-wp
-Description: A Wordpress plugin that turns your 404 "not found" error page into a 404 page dedicated to help impoverished children around the world receive sponsorships. Inspired by and extends the plugin built by Kenny Katzgrau for 404notfound.org 
-Version: 1.0
+Description: A WordPress plug-in designed to convert your 404 not found page into a way to help a Compassion child find a sponsor.
+Version: 1.2
 Author: Phil Birnie
 Author URI: http://marketingadept.com
 */
@@ -11,7 +11,7 @@ Author URI: http://marketingadept.com
 require_once dirname(__FILE__) . '/lib/Utility.php';
 require_once dirname(__FILE__) . '/lib/View.php';
 
-add_action('template_redirect',   array('Compassion_Core', 'load404'), 1);
+add_action('template_redirect',   array('Compassion_Core', 'load404'), 20); 
 add_action('admin_menu',   array('Compassion_Core', 'registerAdmin'));
 
 /**
@@ -23,22 +23,41 @@ class Compassion_Core
     * Load the NotFound 404 page
     */
     static function load404()
-    {
-        if(is_404()) {
-
-            $omit_404 = Compassion_Utility::getOption('nf_omit_error', false);
-
-            if(!$omit_404)
-                header("HTTP/1.1 404 Not Found");
-            else
-                header("HTTP/1.1 200 OK");
-
-
-            Compassion_View::load('notfound');
-            exit;
+    { 	
+		
+        if(  is_404()  ) { 
+			// if permalink finder is defined AND no suggestions found
+			if ( (function_exists('kpg_permalink_finder')) && ($find<1) ) {
+									
+					$omit_404 = Compassion_Utility::getOption('nf_omit_error', false);
+	
+					if(!$omit_404)
+						header("HTTP/1.1 404 Not Found");
+					else
+						header("HTTP/1.1 200 OK");
+		
+					Compassion_View::load('notfound');
+					exit;
+		
+				
+			} else {
+			//  permalink finder is not defined or no suggestion
+					$omit_404 = Compassion_Utility::getOption('nf_omit_error', false);
+		  
+					if(!$omit_404)
+						header("HTTP/1.1 404 Not Found");
+					else
+						header("HTTP/1.1 200 OK");
+			
+					Compassion_View::load('notfound');
+					exit;
+			}
+			
         }
-    }
-
+		
+	
+    
+	}
     /**
      * Register the admin settings page
      */

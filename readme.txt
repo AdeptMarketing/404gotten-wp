@@ -41,6 +41,10 @@ disrupt its function.
 
 == Changelog ==
 
+1.4
+---
+Fix display issue when used on https
+
 1.3
 ---
 Introduces compatibility with Permalink Finder (Daren Viss)
